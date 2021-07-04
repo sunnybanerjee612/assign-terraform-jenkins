@@ -3,15 +3,15 @@ provider "aws" {
  profile = "Deep"
  }
  resource "aws_instance" "my-terraform-assignment" {
-  ami           = “0b1deee75235aa4bb”
+  ami           = “ami-0b1deee75235aa4bb”
   instance_type = "t3.micro"
 
   }
-resource “aws_s3_bucket” “b” {
+resource “aws_s3_bucket” “bucket” {
    Bucket = “deep7-4pm-sun”
     acl        = “public-read”
     tags = {
-    Name    = “ My bucket”
+    Name    = “My bucket”
     Environment = “Dev”
   }
 }
